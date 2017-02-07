@@ -1,6 +1,10 @@
 # Movie Search
 Quickly find a movie's streaming URL
 
+
+![Command Line Gif](command_line.gif)
+
+
 ## To Install
 1. Clone or fork repo
 2. Install python packages `pip install -r requirements.txt`
