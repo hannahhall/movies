@@ -1,5 +1,5 @@
 import guidebox
-from api_key import key
+from .api_key import key
 
 
 
@@ -16,9 +16,3 @@ class Search:
         """Look up specific movie by id"""
         result = guidebox.Movie.retrieve(id=movie_id)
         return result
-
-#choose movie from Search
-
-
-#list source URLs
-    #if can't find subscription sources look in paid
