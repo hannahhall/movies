@@ -1,0 +1,21 @@
+<h1>{{detail.original_title}}</h1>
+
+<h2>Cast</h2>
+  <ul>
+    {% for actor in cast %}
+      <li>{{actor.name}}</li>
+    {% endfor %}
+  </ul>
+
+<h2>Synopsis</h2>
+<p>{{detail.overview}}</p>
+
+<h2>Links</h2>
+<h3>Subscription</h3>
+  {% for sub in detail.subscription_web_sources %}
+    <p><a href="{{sub.link}}">{{sub.display_name}}</a></p>
+  {% endfor %}
+<h3>Purchase</h3>
+  {% for p in detail.purchase_web_sources %}
+    <p><a href="{{p.link}}">{{p.display_name}}</a></p>
+  {% endfor %}

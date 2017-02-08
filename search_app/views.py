@@ -14,4 +14,17 @@ def search(request):
         field='title',
         query=name
     )
-    return render(request, 'search_app/movie_list.html', {'movie_list': movie_list})
+    return render(
+        request,
+        'search_app/movie_list.html',
+        {'movie_list': movie_list}
+    )
+
+def movie_detail(request, movie_id):
+    detail = guidebox.Search().movie_lookup_by_id(movie_id=movie_id)
+    cast = detail['cast'][:5]
+    return render(
+        request,
+        'search_app/movie_detail.html',
+        {'detail': detail, 'cast':cast}
+    )

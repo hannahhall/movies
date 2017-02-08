@@ -1,7 +1,9 @@
 {% for movie in movie_list %}
-  <a>{{movie.original_title}}
-    {% if movie.release_year %}
-      {{movie.release_year}}
-    {% endif %}
-  </a>
+  <p>
+    <a href="{% url 'search_app:detail' movie.id %}">{{movie.original_title}}
+      {% if movie.release_year %}
+        {{movie.release_year}}
+      {% endif %}
+    </a>
+  </p>
 {% endfor %}
