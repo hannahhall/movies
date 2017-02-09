@@ -5,8 +5,10 @@ from django.views.generic.base import TemplateView
 import json
 from v1 import guidebox
 
+
 class IndexView(TemplateView):
     template_name = 'search_app/index.html'
+
 
 def search(request):
     name = request.POST['movie_name']
@@ -27,4 +29,12 @@ def movie_detail(request, movie_id):
         request,
         'search_app/movie_detail.html',
         {'detail': detail, 'cast':cast}
+    )
+
+def related_movies(request, movie_id):
+    movie_list = guidebox.Search().find_related_movies(movie_id)
+    return render(
+        request,
+        'search_app/movie_list.html',
+        {'movie_list': movie_list}
     )
