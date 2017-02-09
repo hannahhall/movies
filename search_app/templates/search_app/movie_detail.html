@@ -1,3 +1,4 @@
+{{detail}}
 <h1>{{detail.original_title}}</h1>
 
 <h2>Cast</h2>
@@ -6,7 +7,7 @@
       <li>{{actor.name}}</li>
     {% endfor %}
   </ul>
-
+<a href="{% url 'search_app:related' detail.id %}">Find related</a>
 <h2>Synopsis</h2>
 <p>{{detail.overview}}</p>
 
