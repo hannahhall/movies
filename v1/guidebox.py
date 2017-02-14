@@ -21,10 +21,6 @@ class Search:
         result = guidebox.Movie.retrieve(id=movie_id)
         return result
 
-    def movie_search_by_tag(self, tag_name):
-        results = guidebox.Movie.list(tag = tag_name)
-        return results
-
     def search_for_actor(self, name):
         results = guidebox.Search.person(query=name)
         return results
