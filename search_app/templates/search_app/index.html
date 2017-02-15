@@ -1,4 +1,4 @@
-
+{% load static %}
 <!DOCTYPE html>
  <html>
  	<head>
@@ -8,13 +8,13 @@
  		<!-- <link rel="stylesheet" type="text/css" href=" "> -->
  	</head>
  	<body>
-    <div class="container">
-      <form class="form" action="{% url 'search_app:search' %}" method="post">
-        {% csrf_token %}
-        <input type="text" name="movie_name" value="" placeholder="Search by movie name">
-      </form>
+    {% csrf_token %}
+    <div id="app_container" ng-app="movie_search">
+      <div class="navbar" ng-controller="HereCtrl as here">
+      </div>
+
     </div>
 
- 		<!-- <script type="text/javascript" src=" "></script> -->
- 	</body>
+    <script src="{% static 'dist/bundle.js' %}"></script>
+  </body>
  </html>
