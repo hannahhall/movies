@@ -10,11 +10,8 @@
  	<body>
     {% csrf_token %}
     <div id="app_container" ng-app="movie_search">
-      <div class="navbar" ng-controller="HereCtrl as here">
-      </div>
-
+      <div ng-view></div>
     </div>
-
     <script src="{% static 'dist/bundle.js' %}"></script>
   </body>
  </html>
