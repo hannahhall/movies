@@ -1,0 +1,26 @@
+{
+  "name": "movie_search",
+  "version": "1.0.0",
+  "description": "Quickly find a movie's streaming URL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node_modules/.bin/webpack --progress --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hannahhall/movies.git"
+  },
+  "author": "Hannah Hall",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hannahhall/movies/issues"
+  },
+  "homepage": "https://github.com/hannahhall/movies#readme",
+  "devDependencies": {
+    "webpack": "^2.2.1"
+  },
+  "dependencies": {
+    "angular": "^1.6.2"
+  }
+}
