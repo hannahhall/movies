@@ -63,39 +63,12 @@
 /******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ([
-/* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(1)();
-
-angular.module('movie_search', [])
-.config(['$interpolateProvider', function($interpolateProvider){
-    'use strict';
-    $interpolateProvider.startSymbol('[[').endSymbol(']]')
-  }])
-.controller('HereCtrl', function() {
-  alert('loaded!');
-
-  console.log('woohoooooo')
-
-})
-
-
-/***/ }),
+/* 0 */,
 /* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = function () {
-    __webpack_require__(3);
-};
-
-
-/***/ }),
-/* 2 */
 /***/ (function(module, exports) {
 
 /**
@@ -33234,11 +33207,41 @@ $provide.value("$locale", {
 !window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
 
 /***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1);
+module.exports = angular;
+
+
+/***/ }),
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(2);
-module.exports = angular;
+__webpack_require__(5);
+__webpack_require__(4);
+
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+angular.module('movie_search').controller('SearchCtrl', function() {
+  console.log('working');
+
+})
+
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports) {
+
+angular.module('movie_search', [])
+.config(['$interpolateProvider', function($interpolateProvider){
+    'use strict';
+    $interpolateProvider.startSymbol('[[').endSymbol(']]')
+  }])
 
 
 /***/ })
