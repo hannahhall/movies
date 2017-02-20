@@ -7,7 +7,7 @@ var APP = __dirname;
 module.exports = {
   context: APP,
    entry: {
-         app: './search_app/static/src/index.js'
+         app: './search_app/static/src/javascript/index.js'
   },
   output: {
       path: './search_app/static/dist/',
